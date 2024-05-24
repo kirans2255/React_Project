@@ -19,8 +19,8 @@ const Weddinginvitation = () => {
 
   return (
     <div className='board'>
-      <div className="col-12 wedding-card">
-        <div className=" background-image-container">
+      <div className="wedding-card">
+        <div className="background-image-container">
           <img src={backgroundImage} alt="Wedding Background" />
         </div>
         <div className="card-content">

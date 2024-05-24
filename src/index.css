@@ -8,8 +8,8 @@ body{
 }
 .wedding-card {
   position: relative;
-  width: 580px;
-  height: 700px;
+  width: 600px;
+  height:860px;
   margin: 30px auto;
   background-color: #fff;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
@@ -79,10 +79,4 @@ body{
   font-style: normal;
   font-weight: bold;
   font-size: 1.5rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .wedding-card {
-    width: 90%; 
-  }
 }
