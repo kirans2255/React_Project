@@ -38,9 +38,11 @@ body{
   position: relative;
   /* padding: 30px; */
   text-align: center;
-  margin-top: 330px;
+  margin-top: 350px;
   color: #333;
   animation: slideUp 2s ease-in-out;
+  overflow: hidden;
+
 }
 
 @keyframes slideUp {
