@@ -1,7 +1,5 @@
 import React from 'react';
 import pic from './utils/images/pics.png';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-
 
 const Weddinginvitation = () => {
   const [coupleNames, setCoupleNames] = React.useState({
@@ -13,17 +11,15 @@ const Weddinginvitation = () => {
   const [location, setLocation] = React.useState('ROYAL BOTANICAL GARDEN - SYDENY');
   const [sa, setSa] = React.useState('Request the pleasure of your company at the ceremony of our wedding');
 
-
-
   const [backgroundImage, setBackgroundImage] = React.useState(pic);
 
   return (
-    <div className="col-12 wedding-card">
-      <div className=" background-image-container">
-        <img src={backgroundImage} alt="Wedding Background" />
+    <div className="wedding-invitation"> {/* Use a more generic class name */}
+      <div className="background-image-container">
+        <img src={backgroundImage} alt="Wedding Background" style={{ width: '100%' }} /> {/* Ensure image scales proportionally */}
       </div>
       <div className="card-content">
-        <h1 className="couple-names">
+        <h1 className="couple-names" style={{ fontSize: '1.5rem' }}> {/* Adjust font size for mobile */}
           {coupleNames.bride} & {coupleNames.groom}
         </h1>
         <p className='sa'>{sa}</p>
