@@ -8,13 +8,13 @@ const Weddinginvitation = () => {
   });
   const [date, setDate] = React.useState('June |25| 2024');
   const [time, setTime] = React.useState("AT FIVE O'CLOCK IN THE EVENING");
-  const [location, setLocation] = React.useState('ROYAL BOTANICAL GARDEN - SYDENY');
+  const [location, setLocation] = React.useState('ROYAL BOTANICAL GARDEN - SYDNEY');
   const [sa, setSa] = React.useState('Request the pleasure of your company at the ceremony of our wedding');
 
   const [backgroundImage, setBackgroundImage] = React.useState(pic);
 
   return (
-    <div className="wedding-card"> 
+    <div className="wedding-invitation"> 
       <div className="background-image-container">
         <img src={backgroundImage} alt="Wedding Background" style={{ width: '100%' }} /> {/* Ensure image scales proportionally */}
       </div>
