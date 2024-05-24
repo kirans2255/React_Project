@@ -41,15 +41,15 @@ body{
   text-align: center;
   margin-top: 380px;
   color: #333;
-  animation: slideUp 2s ease-in-out;
+  /* animation: slideUp 2s ease-in-out; */
   overflow: hidden;
 
 }
 
-@keyframes slideUp {
+/* @keyframes slideUp {
   from { transform: translateY(300px); } 
   to { transform: translateY(0); }
-}
+} */
 
 .couple-names {
   font-family: "Poetsen One", sans-serif;
