@@ -1,5 +1,5 @@
 import React from 'react';
-import pic from './utils/images/pics.png';
+import pic from './utils/images/picss.png';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 
