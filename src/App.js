@@ -1,5 +1,7 @@
 import React from 'react';
 import pic from './utils/images/pics.png';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+
 
 const Weddinginvitation = () => {
   const [coupleNames, setCoupleNames] = React.useState({
@@ -17,8 +19,8 @@ const Weddinginvitation = () => {
 
   return (
     <div className='board'>
-      <div className="wedding-card">
-        <div className="background-image-container">
+      <div className="col-4 wedding-card">
+        <div className=" background-image-container">
           <img src={backgroundImage} alt="Wedding Background" />
         </div>
         <div className="card-content">
