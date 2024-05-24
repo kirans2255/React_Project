@@ -16,10 +16,10 @@ const Weddinginvitation = () => {
   return (
     <div className="wedding-invitation"> 
       <div className="background-image-container">
-        <img src={backgroundImage} alt="Wedding Background" style={{ width: '100%' }} /> {/* Ensure image scales proportionally */}
+        <img src={backgroundImage} alt="Wedding Background" style={{ width: '100%' }} />
       </div>
       <div className="card-content">
-        <h1 className="couple-names" style={{ fontSize: '1.5rem' }}> {/* Adjust font size for mobile */}
+        <h1 className="couple-names" style={{ fontSize: '1.5rem' }}> 
           {coupleNames.bride} & {coupleNames.groom}
         </h1>
         <p className='sa'>{sa}</p>
