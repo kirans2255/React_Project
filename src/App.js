@@ -19,7 +19,7 @@ const Weddinginvitation = () => {
 
   return (
     <div className='board'>
-      <div className="col-6 wedding-card">
+      <div className="col-8 wedding-card">
         <div className="background-image-container">
           <img src={backgroundImage} alt="Wedding Background" />
         </div>
