@@ -14,7 +14,7 @@ const Weddinginvitation = () => {
   const [backgroundImage, setBackgroundImage] = React.useState(pic);
 
   return (
-    <div className="wedding-invitation"> 
+    <div className="wedding-card"> 
       <div className="background-image-container">
         <img src={backgroundImage} alt="Wedding Background" style={{ width: '100%' }} /> {/* Ensure image scales proportionally */}
       </div>
