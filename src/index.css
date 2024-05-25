@@ -39,7 +39,7 @@ body{
   position: relative;
   /* padding: 30px; */
   text-align: center;
-  margin-top: 380px;
+  margin-top: 300px;
   color: #ffffff;
   /* animation: slideUp 2s ease-in-out; */
   overflow: hidden;
@@ -110,7 +110,7 @@ input {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   font-size: 15px;
-  padding: 10px;
-  display: flex;
-  margin: 0 auto;
+  padding: 5px;
+  /* display: flex; */
+  /* margin: 0 auto; */
 }
