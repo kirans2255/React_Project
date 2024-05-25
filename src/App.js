@@ -7,6 +7,7 @@ const Weddinginvitation = () => {
     groom: '',
     date: '',
     time: '',
+    location:''
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -28,7 +29,7 @@ const Weddinginvitation = () => {
 
   const toggleEditing = () => {
     setIsEditing(!isEditing);
-    setFormData(submittedData || initialFormData); // Reset form on edit
+    setFormData(submittedData || initialFormData);
   };
 
   return (
@@ -63,9 +64,9 @@ const Weddinginvitation = () => {
             {submittedData ? `${submittedData.bride} & ${submittedData.groom}` : 'Enter Names'}
           </h1>
           <p className="sa">{'We Invite You To Join In Our Wedding Ceremony'}</p>
-          <p className="date">{submittedData ? submittedData.date : '-'}</p>
-          <p className="time">{submittedData ? submittedData.time : '-'}</p>
-          <p className="location">{submittedData ? submittedData.location : '-'}</p>
+          <p className="date">{submittedData ? submittedData.date : 'Date'}</p>
+          <p className="time">{submittedData ? submittedData.time : 'Time'}</p>
+          <p className="location">{submittedData ? submittedData.location : 'Location'}</p>
           <button className='editbutton' onClick={toggleEditing}>Edit Details</button>
         </div>
       )}
