@@ -11,13 +11,11 @@ const DisplayInvitation = () => {
 
   return (
     <div className="wedding-invitation">
-      <div className="background-image-container">
-        {backgroundImage ? (
-          <img src={backgroundImage} alt="Wedding round" style={{ width: '100%' }} />
-        ) : (
-          <img src="./utils/images/pics.png" alt="Wedding Background" style={{ width: '100%' }} />
-        )}
-      </div>
+      {backgroundImage && (
+        <div className="background-image-container">
+          <img src={backgroundImage} alt="Wedding Background" style={{ width: '100%' }} />
+        </div>
+      )}
       <div className="card-content">
         <h1 className="couple-names" style={{ fontSize: '1.5rem' }}>
           {bride && groom ? `${bride} & ${groom}` : 'Enter Names'}
