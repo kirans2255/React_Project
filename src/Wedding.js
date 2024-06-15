@@ -8,7 +8,7 @@ const Weddinginvitation = () => {
     date: '',
     time: '',
     location: '',
-    backgroundImage: null,
+    backgroundImageUrl: '',
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -20,14 +20,6 @@ const Weddinginvitation = () => {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleBackgroundImageChange = (event) => {
-    const selectedFile = event.target.files[0];
-    setFormData({
-      ...formData,
-      backgroundImage: selectedFile,
     });
   };
 
@@ -70,7 +62,7 @@ const Weddinginvitation = () => {
       date: formData.date,
       time: formData.time,
       location: formData.location,
-      backgroundImage: formData.backgroundImage ? URL.createObjectURL(formData.backgroundImage) : '',
+      backgroundImageUrl: formData.backgroundImageUrl,
     }).toString();
     return `${window.location.origin}/display?${queryParams}`;
   };
@@ -78,8 +70,8 @@ const Weddinginvitation = () => {
   return (
     <div className="wedding-invitation">
       <div className="background-image-container">
-        {formData.backgroundImage ? (
-          <img src={URL.createObjectURL(formData.backgroundImage)} alt="Wedding Background" style={{ width: '100%' }} />
+        {formData.backgroundImageUrl ? (
+          <img src={formData.backgroundImageUrl} alt="Wedding Background" style={{ width: '100%' }} />
         ) : (
           <img src="./utils/images/pics.png" alt="Wedding Background" style={{ width: '100%' }} />
         )}
@@ -102,8 +94,8 @@ const Weddinginvitation = () => {
             <label htmlFor="location">Location:</label>
             <input type="location" id="location" name="location" value={formData.location} onChange={handleChange} required /> <br />
 
-            <label htmlFor="backgroundImage">Background Image:</label>
-            <input type="file" id="backgroundImage" name="backgroundImage" accept="image/*" onChange={handleBackgroundImageChange} />
+            <label htmlFor="backgroundImageUrl">Background Image URL:</label>
+            <input type="url" id="backgroundImageUrl" name="backgroundImageUrl" value={formData.backgroundImageUrl} onChange={handleChange} required />
             <br />
 
             <button className="submit" type="submit">Submit</button>
@@ -122,7 +114,7 @@ const Weddinginvitation = () => {
             <div ref={qrCodeRef} style={{ display: 'none' }}>
               <QRCode
                 value={generateQRValue()}
-                size={128}
+                size={208}
                 level={"H"}
                 includeMargin={true}
               />
